@@ -41,7 +41,8 @@ class AdminList extends Component<any, IState> {
 
     getAdminList = (page: number = 1) => {
         getAdminList(page).then(response => {
-            const {dataList, limit, totalCount} = response.data.data
+            console.log("添加list",response)
+            const {dataList, limit, totalCount} = response.data
             this.setState({
                 adminList: dataList,
                 loading: false,
@@ -130,7 +131,7 @@ class AdminList extends Component<any, IState> {
                         title={'电话'}
                         dataIndex={'mobile'}/>
                     <Table.Column
-                        title={'电话'}
+                        title={'操作'}
                         render={(admin: IAdmin) => (<Space>
                             <Button type='primary' onClick={() => {
                                 this.showEditAdminModal(admin)
