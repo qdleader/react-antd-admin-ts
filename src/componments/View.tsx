@@ -1,5 +1,6 @@
 import React, {Component, Fragment, ReactNode, Suspense} from 'react';
 import router, {IRouter, unAuthRouter} from "../router";
+
 import {
     BrowserRouter as Router,
     Redirect,

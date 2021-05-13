@@ -10,6 +10,14 @@ import PermissionStore from "../store/PermissionStore";
 import {matchPath, RouteComponentProps, withRouter} from "react-router-dom";
 
 import LeftBarStore from "../store/LeftBarStore";
+import {get} from "./../utils/storage";
+
+import {
+    BrowserRouter as Router,
+    Redirect,
+    Route,
+    Switch
+} from "react-router-dom";
 
 import {
     MenuUnfoldOutlined,
@@ -69,6 +77,9 @@ class AppLayout extends Component<IProps, IState> {
         this.props.LeftBarStore?.changeCollapsed(!this.props.LeftBarStore?.collapsed)
     };
     render() {
+        if(!get('token')) {
+            return  <Redirect to="/login" />
+        }
         if (this.props.permissionStore?.state === 'loading') {
             // console.log("this.props.permissionStore?",this.props.permissionStore)
             // console.log("this.props.permissionStore?.state",this.props.permissionStore?.state)
