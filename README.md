@@ -1,8 +1,7 @@
 # 初始化项目
 
-![QQ交流群](./src/static/img/qq.png)
 
-## [QQ交流群](https://qm.qq.com/cgi-bin/qm/qr?k=kjrY3L6AS2RuZYoaodxmuFLAu2hGxLIu&jump_from=webapi)
+
 ```
 yarn create react-app react-antd-admin-ts --template=typescript
 
@@ -35,3 +34,4 @@ yarn add react-router-dom @types/react-router-dom
 
 ```
 
+微信搜前端架构师或qdleader 一同成长
